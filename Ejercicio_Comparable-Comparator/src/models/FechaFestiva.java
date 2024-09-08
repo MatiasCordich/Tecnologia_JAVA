@@ -54,7 +54,7 @@ public class FechaFestiva implements Comparable<FechaFestiva> {
 	// ----- Metodo toString() ----- //
 	@Override
 	public String toString() {
-		return nombre + " {Dia:" + dia + ", Mes=" + mes + ", fanatismo=" + fanatismo + "}";
+		return nombre + " {Dia: " + dia + ", Mes= " + mes + ", fanatismo= " + fanatismo + "}";
 	}
 	
 	// ----- Metodo: Obtener el número total de días desde el inicio del año ----- //
@@ -63,7 +63,15 @@ public class FechaFestiva implements Comparable<FechaFestiva> {
 	}
 	@Override
 	public int compareTo(FechaFestiva otraFecha) {
-		return Integer.compare(this.getDiasTotales(), otraFecha.getDiasTotales());
+		
+		int resultado = 0;
+		if (this.getDiasTotales() > otraFecha.getDiasTotales()) {
+			resultado = 1;
+		} else if (this.getDiasTotales() < otraFecha.getDiasTotales()) {
+			resultado = -1;
+		}
+					
+		return resultado;
 	}
 
 }
