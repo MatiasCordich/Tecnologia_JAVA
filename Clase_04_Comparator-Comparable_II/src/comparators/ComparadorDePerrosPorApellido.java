@@ -21,7 +21,7 @@ implements Comparator<Perro>{
 	 * @param perro_2 segundo perro a comparar. 
 	 * @return Positivo si: perro_1 < perro_2,
 	 * Negativo si: perro_1 > perro_2,
-	 * Cerro si: perro_1 == perro_2,
+	 * Cerro si: perro_1 == perro_2
 	 * */
 	@Override
 	public int compare(Perro perro_1, Perro perro_2) {
